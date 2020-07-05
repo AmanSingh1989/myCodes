@@ -15,14 +15,14 @@ public class GmailLoginPage {
 
 	// Using FindBy for locating elements 
 	@FindBy(how = How.XPATH, using = 
-			"// input[@type='email']]") 
+			"//*[@id=\"identifierId\"]") 
 	WebElement emailTextBox; 
 
 	@FindBy(how = How.XPATH, using = 
 			"// input[@type='password']") 
 	
 	WebElement passwordTextBox; 
-	@FindBy(how = How.XPATH, using = "// div[@role = 'button' and @id = 'identifierNext']") 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"identifierNext\"]/div") 
 	WebElement nextButton; 
 
 	// Defining all the user actions (Methods) 
