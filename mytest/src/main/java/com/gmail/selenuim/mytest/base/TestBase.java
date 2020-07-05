@@ -3,7 +3,9 @@ package com.gmail.selenuim.mytest.base;
 import java.io.IOException; 
 import java.util.concurrent.TimeUnit; 
 import org.openqa.selenium.WebDriver; 
-import org.openqa.selenium.chrome.ChromeDriver; 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.GeckoDriverService;
 import org.testng.annotations.AfterSuite; 
 import org.testng.annotations.BeforeSuite; 
 
@@ -14,11 +16,11 @@ public class TestBase {
 	@BeforeSuite
 	public void initialize() throws IOException { 
 
-		System.setProperty("webdriver.chrome.driver", 
+		System.setProperty("webdriver.gecko.driver", 
 		System.getProperty("user.dir") + 
-			"C:\\Users\\Aman Singh\\Documents\\GitHub\\myCodes\\mytest\\driver"); 
+			"\\driver\\geckodriver.exe"); 
 	
-		driver = new ChromeDriver(); 
+		driver = new FirefoxDriver();
 	
 		// To maximize browser 
 		driver.manage().window().maximize(); 
@@ -28,7 +30,7 @@ public class TestBase {
 			10, TimeUnit.SECONDS); 
 	
 		// To open Gmail site 
-		driver.get("https:// www.gmail.com"); 
+		driver.get("https://www.gmail.com"); 
 	} 
 
 	@AfterSuite

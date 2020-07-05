@@ -14,12 +14,11 @@ public class GmailLoginTest extends TestBase {
 
 		// driver.get("https:// www.gmail.com"); 
 		GmailLoginPage loginpage = 
-		PageFactory.initElements(driver, 
-		GmailLoginPage.class); 
+		new GmailLoginPage(driver); 
 	
-		loginpage.setEmail("abc@gmail.com"); 
+		loginpage.setEmail("aman.singh1493@gmail.com"); 
 		loginpage.clickOnNextButton(); 
-		loginpage.setPassword("23456@qwe"); 
+		loginpage.setPassword("@m@n113114"); 
 		loginpage.clickOnNextButton(); 
 	} 
 } 
